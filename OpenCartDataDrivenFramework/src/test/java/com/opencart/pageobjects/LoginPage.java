@@ -20,7 +20,7 @@ public class LoginPage extends BaseClass {
 	}
 
 	@FindBy(id = "input-email")
-	WebElement emailField;
+	private WebElement emailField;
 
 	public void enterEmailAddress(String emailText) {
 
@@ -29,7 +29,7 @@ public class LoginPage extends BaseClass {
 	}
 
 	@FindBy(id = "input-password")
-	WebElement passwordField;
+	private WebElement passwordField;
 
 	public void enterPassword(String passwordText) {
 
@@ -38,7 +38,7 @@ public class LoginPage extends BaseClass {
 	}
 
 	@FindBy(xpath = "//input[@value='Login']")
-	WebElement loginButton;
+	private WebElement loginButton;
 
 	public MyAccountPage clickOnLoginButton() {
 
@@ -48,7 +48,7 @@ public class LoginPage extends BaseClass {
 	}
 
 	@FindBy(xpath = "//a[@class='btn btn-primary']")
-	WebElement registerAC;
+	private WebElement registerAC;
 
 	public RegisterPage registerAccount() {
 		registerAC.click();
@@ -56,7 +56,7 @@ public class LoginPage extends BaseClass {
 	}
 
 	@FindBy(xpath = "//h2[text()='Returning Customer']")
-	WebElement varificationText;
+	private WebElement varificationText;
 
 	public String varifyText() {
 		return varificationText.getText();

@@ -36,6 +36,7 @@ public class TC007_CheckoutPageTest extends BaseClass {
 		login.enterPassword(password);
 		MyAccountPage myaccount = login.clickOnLoginButton();
 		myaccount.searchItem("hp");
+	
 		SearchResultPage searchResultPage = myaccount.pressSearchBtn(Keys.ENTER);
 		ProductPage productPage = searchResultPage.clickOnProductImage();
 		productPage.addToCart();

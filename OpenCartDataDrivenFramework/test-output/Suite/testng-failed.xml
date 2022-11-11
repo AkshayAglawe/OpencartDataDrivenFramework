@@ -2,14 +2,26 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="com.opencart.util.Listeners"/>
+  </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.opencart.tests.TC009_EndToEndTest">
+      <class name="com.opencart.tests.TC003_MyAccountPageTest">
         <methods>
           <include name="launchApp"/>
-          <include name="endToEndFlowTest" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="searchWithEnterBtn"/>
+          <include name="searchForExistingProduct"/>
         </methods>
-      </class> <!-- com.opencart.tests.TC009_EndToEndTest -->
+      </class> <!-- com.opencart.tests.TC003_MyAccountPageTest -->
+      <class name="com.opencart.tests.TC007_CheckoutPageTest">
+        <methods>
+          <include name="launchApp"/>
+          <include name="enterBillingDetails" invocation-numbers="0"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.opencart.tests.TC007_CheckoutPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -19,21 +19,21 @@ public class RegisterPage extends BaseClass {
 	}
 
 	@FindBy(xpath = "//h1[text()='Register Account']")
-	WebElement heading;
+	private WebElement heading;
 
 	public String validateHeading() {
 		return heading.getText();
 	}
 
 	@FindBy(xpath = "//a[text()='login page']")
-	WebElement loginLink;
+	private WebElement loginLink;
 
 	public boolean validateLoginLink() {
 		return loginLink.isDisplayed();
 	}
 
 	@FindBy(xpath = "//input[@id='input-firstname']")
-	WebElement firstNameField;
+	private WebElement firstNameField;
 
 	public void enterFirstname(Object firstName) {
 		firstNameField.sendKeys(String.valueOf(firstName));
@@ -41,42 +41,42 @@ public class RegisterPage extends BaseClass {
 	}
 
 	@FindBy(xpath = "//input[@id='input-lastname']")
-	WebElement lastNameField;
+	private WebElement lastNameField;
 
 	public void enterLastName(Object lastName) {
 		lastNameField.sendKeys(String.valueOf(lastName));
 	}
 
 	@FindBy(xpath = "//input[@id='input-email']")
-	WebElement emailField;
+	private WebElement emailField;
 
 	public void enterEmail(Object email) {
 		emailField.sendKeys(String.valueOf(email));
 	}
 
 	@FindBy(xpath = "//input[@id='input-telephone']")
-	WebElement telephoneField;
+	private WebElement telephoneField;
 
 	public void enterTelephone(Object telephone) {
 		telephoneField.sendKeys(String.valueOf(telephone));
 	}
 
 	@FindBy(xpath = "//input[@id='input-password']")
-	WebElement passwordField;
+	private WebElement passwordField;
 
 	public void enterPassword(Object pwd) {
 		passwordField.sendKeys(String.valueOf(pwd));
 	}
 
 	@FindBy(xpath = "//input[@id='input-confirm']")
-	WebElement confirmPasswordField;
+	private WebElement confirmPasswordField;
 
 	public void enter(Object confirmPwd) {
 		confirmPasswordField.sendKeys(String.valueOf(confirmPwd));
 	}
 
 	@FindBy(xpath = "//label[normalize-space()='Yes']//input[@name='newsletter']")
-	WebElement newsLetterRadioButton;
+	private WebElement newsLetterRadioButton;
 
 	public void selectYesRadioBtn() {
 		newsLetterRadioButton.click();
@@ -84,7 +84,7 @@ public class RegisterPage extends BaseClass {
 	}
 
 	@FindBy(xpath = "//input[@name='agree']")
-	WebElement privacyPolicyCheckbox;
+	private WebElement privacyPolicyCheckbox;
 
 	public void selectPrivacyPolicyCheckbox() {
 		privacyPolicyCheckbox.click();
@@ -92,21 +92,22 @@ public class RegisterPage extends BaseClass {
 	}
 
 	@FindBy(xpath = "//input[@value='Continue']")
-	WebElement continueBtn;
+	private WebElement continueBtn;
 
 	public void clickOnContinueBtn() {
 		continueBtn.click();
 	}
-	@FindBy(xpath="//h1[normalize-space()='Your Account Has Been Created!']")
-	WebElement successMsg;
-	
+
+	@FindBy(xpath = "//h1[normalize-space()='Your Account Has Been Created!']")
+	private WebElement successMsg;
+
 	public String validateSuccessMsg() {
 		return successMsg.getText();
 	}
-	
-	@FindBy(xpath="//a[@class='btn btn-primary']")
-	WebElement continueBtnAfterRegister;
-	 
+
+	@FindBy(xpath = "//a[@class='btn btn-primary']")
+	private WebElement continueBtnAfterRegister;
+
 	public LoginPage clickOnContinueBtnAfterRegister() {
 		continueBtnAfterRegister.click();
 		return new LoginPage(driver);

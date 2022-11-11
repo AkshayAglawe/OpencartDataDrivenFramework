@@ -22,8 +22,7 @@ public class TC003_MyAccountPageTest extends BaseClass {
 		myaccount.searchItem("hp");
 		SearchResultPage resultPage = myaccount.pressSearchBtn(Keys.ENTER);
 	    Assert.assertEquals(resultPage.validateSearchResult(),"HP LP3065");
-		//Assert.assertTrue(true);
-		System.out.println("check2");
+		
 	}
 	@Test(priority = 2)
 	public void searchForNonExistingProduct() {
@@ -48,7 +47,7 @@ public class TC003_MyAccountPageTest extends BaseClass {
 		MyAccountPage myaccount = login.clickOnLoginButton();
 		myaccount.searchItem("hp");
 		SearchResultPage resultPage = myaccount.pressSearchBtn(Keys.ENTER);
-		//SearchResultPage resultPage= new SearchResultPage(driver);
+		
 		Assert.assertEquals(resultPage.validateSearchResult(),"HP LP3065");
 	}
 	

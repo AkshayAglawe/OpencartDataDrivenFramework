@@ -5,9 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LogOutPage { 
-	
-	
+public class LogOutPage {
+
 	WebDriver driver;
 
 	public LogOutPage(WebDriver driver) {
@@ -17,13 +16,12 @@ public class LogOutPage {
 		PageFactory.initElements(driver, this);
 
 	}
-	
-	@FindBy(xpath="//a[@class='btn btn-primary']")
-	WebElement continueBtn;
-	
+
+	@FindBy(xpath = "//a[@class='btn btn-primary']")
+	private WebElement continueBtn;
+
 	public void clickOnContinueBtn() {
 		continueBtn.click();
 	}
-	
-	
+
 }

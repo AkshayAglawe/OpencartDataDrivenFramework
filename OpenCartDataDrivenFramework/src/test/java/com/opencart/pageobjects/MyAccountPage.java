@@ -20,7 +20,7 @@ public class MyAccountPage extends BaseClass {
 	}
 
 	@FindBy(xpath = "//input[@name='search']")
-	WebElement searchBox;
+	private WebElement searchBox;
 
 	public void searchItem(String itemText) {
 		searchBox.clear();
@@ -28,7 +28,7 @@ public class MyAccountPage extends BaseClass {
 	}
 
 	@FindBy(xpath = "//input[@name='search']")
-	WebElement searchBtn;
+	private WebElement searchBtn;
 
 	public SearchResultPage clickOnSearchBtn() {
 		searchBtn.click();
@@ -42,7 +42,7 @@ public class MyAccountPage extends BaseClass {
 	}
 
 	@FindBy(xpath = "//a[text()='HP LP3065']")
-	WebElement hp;
+	private WebElement hp;
 
 	public boolean validateSearchResult() {
 		return hp.isDisplayed();
@@ -54,47 +54,47 @@ public class MyAccountPage extends BaseClass {
 	}
 
 	@FindBy(xpath = "//a[normalize-space()='View your order history']")
-	WebElement validateYourOrderHistoryLink;
+	private WebElement validateYourOrderHistoryLink;
 
 	public boolean validateYourOrderHistory() {
 		return validateYourOrderHistoryLink.isDisplayed();
 	}
 
 	@FindBy(xpath = "//h2[normalize-space()='My Orders']")
-	WebElement myOrders;
+	private WebElement myOrders;
 
 	public boolean validateMyOrders() {
 		return myOrders.isDisplayed();
 	}
 
 	@FindBy(xpath = "//span[text()='My Account']")
-	WebElement myAccountDropdownMenu;
+	private WebElement myAccountDropdownMenu;
 
 	public void clickOnMyAccountDropdownMenu() {
 		myAccountDropdownMenu.click();
 	}
 
 	@FindBy(xpath = "//a[text()='Logout']")
-	WebElement logOutBtn1;
+	private WebElement logOutBtn1;
 
 	public LogOutPage SelectLogoutOption() {
 		logOutBtn1.click();
-		return new  LogOutPage(driver);
+		return new LogOutPage(driver);
 	}
 
 	@FindBy(xpath = "(//a[text()='My Account'])[2]")
-	WebElement myAccountFromFooter;
+	private WebElement myAccountFromFooter;
 
 	public void clickOnMyAccountFromFooter() {
 		myAccountFromFooter.click();
 	}
 
 	@FindBy(xpath = "(//a[text()='Logout'])[2]")
-	WebElement logOutBtn2;
+	private WebElement logOutBtn2;
 
 	public LogOutPage logout2() {
 		logOutBtn2.click();
-		return new  LogOutPage(driver);
+		return new LogOutPage(driver);
 	}
 
 }

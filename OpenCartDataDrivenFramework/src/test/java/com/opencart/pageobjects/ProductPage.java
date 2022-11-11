@@ -19,7 +19,7 @@ public class ProductPage extends BaseClass {
 	}
 
 	@FindBy(id = "input-quantity")
-	WebElement qty;
+	private WebElement qty;
 
 	public void enterQuantity(int quantity) {
 		qty.sendKeys(String.valueOf(quantity));
@@ -30,7 +30,7 @@ public class ProductPage extends BaseClass {
 	}
 
 	@FindBy(id = "button-cart")
-	WebElement addToCart;
+	private WebElement addToCart;
 
 	public void addToCart() {
 		addToCart.click();
@@ -38,7 +38,7 @@ public class ProductPage extends BaseClass {
 	}
 
 	@FindBy(xpath = "//button[@type='button']//i[@class='fa fa-heart']")
-	WebElement addToWishList;
+	private WebElement addToWishList;
 
 	public void addToWishList() {
 		addToWishList.click();
@@ -47,25 +47,9 @@ public class ProductPage extends BaseClass {
 	public boolean validateAddToWishlistConfirmation() {
 		return addToWishList.isDisplayed();
 	}
-// shopping cart alert
-	// add to wishlist alert
-
-//	@FindBy (xpath="//div[@class='alert alert-success alert-dismissible']")
-//	WebElement adcConfirmationMsg;
-//	
-//	public String validateAddToCartConfirmationMsg() {
-//		return adcConfirmationMsg.getText();
-//	}
-
-//	@FindBy (xpath="//div[@class='alert alert-success alert-dismissible']")
-//	WebElement adwConfirmationMsg;
-//	
-//	public String validateAddToWishlistConfirmationMsg() {
-//		return adwConfirmationMsg.getText();
-//	}
 
 	@FindBy(xpath = "//a[normalize-space()='shopping cart']")
-	WebElement shoppingCart;
+	private WebElement shoppingCart;
 
 	public ShoppingCart navigateToshoppingCart() {
 		shoppingCart.click();
@@ -77,66 +61,66 @@ public class ProductPage extends BaseClass {
 	}
 
 	@FindBy(xpath = "//h2[normalize-space()='$100.00']")
-	WebElement price;
+	private WebElement price;
 
 	public String validatePrice() {
 		return price.getText();
 	}
 
 	@FindBy(xpath = "//a[normalize-space()='Hewlett-Packard']")
-	WebElement brand;
+	private WebElement brand;
 	@FindBy(xpath = "//li[normalize-space()='Product Code: Product 21']")
-	WebElement productCode;
+	private WebElement productCode;
 	@FindBy(xpath = "//li[normalize-space()='Availability: In Stock']")
-	WebElement availability;
+	private WebElement availability;
 
 	public boolean validateOtherInfo() {
 		return (brand.isDisplayed() && productCode.isDisplayed() && availability.isDisplayed());
 	}
-	
-@FindBy(xpath="//a[normalize-space()='Reviews (0)']")
-WebElement reviews;
- public void clickOnReviewTab() {
-	 reviews.click();
- }
 
-@FindBy(xpath="//input[@id='input-name']")
-WebElement yourNameField;
+	@FindBy(xpath = "//a[normalize-space()='Reviews (0)']")
+	private WebElement reviews;
 
-public void enterYourName(String name) {
-	yourNameField.sendKeys(name);
-	
-}
+	public void clickOnReviewTab() {
+		reviews.click();
+	}
 
-@FindBy(xpath="//textarea[@id='input-review']")
-WebElement inputReview;
+	@FindBy(xpath = "//input[@id='input-name']")
+	private WebElement yourNameField;
 
-public void writeReview(String review) {
-	inputReview.sendKeys(review);
-	
-}
+	public void enterYourName(String name) {
+		yourNameField.sendKeys(name);
 
+	}
 
-@FindBy(xpath="//input[@value='3']")
-WebElement ratingRadioBtn;
+	@FindBy(xpath = "//textarea[@id='input-review']")
+	private WebElement inputReview;
 
-public void giveRating() {
-	ratingRadioBtn.click();
-	
-}
+	public void writeReview(String review) {
+		inputReview.sendKeys(review);
 
-@FindBy(xpath="//button[@id='button-review']")
-WebElement continueBtn;
+	}
 
-public void submitReview() {
-	continueBtn.click();
-	
-}
+	@FindBy(xpath = "//input[@value='3']")
+	private WebElement ratingRadioBtn;
 
-@FindBy(xpath="//div[text()=' Thank you for your review. It has been submitted to the webmaster for approval.']")
-WebElement reviewSubmissionConfirmationAlert;
+	public void giveRating() {
+		ratingRadioBtn.click();
 
-public boolean valiadateReviewAlert() {
-	return reviewSubmissionConfirmationAlert.isDisplayed();
-}
+	}
+
+	@FindBy(xpath = "//button[@id='button-review']")
+	private WebElement continueBtn;
+
+	public void submitReview() {
+		continueBtn.click();
+
+	}
+
+	@FindBy(xpath = "//div[text()=' Thank you for your review. It has been submitted to the webmaster for approval.']")
+	private WebElement reviewSubmissionConfirmationAlert;
+
+	public boolean valiadateReviewAlert() {
+		return reviewSubmissionConfirmationAlert.isDisplayed();
+	}
 }

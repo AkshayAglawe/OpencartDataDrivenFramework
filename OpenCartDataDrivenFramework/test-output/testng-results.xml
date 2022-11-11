@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-08T15:58:40 IST" name="Suite" finished-at="2022-10-08T16:00:04 IST" duration-ms="83550">
+  <suite started-at="2022-11-11T08:20:38 IST" name="Failed suite [Failed suite [Failed suite [Suite]]]" finished-at="2022-11-11T08:20:51 IST" duration-ms="13693">
     <groups>
     </groups>
-    <test started-at="2022-10-08T15:58:40 IST" name="Test" finished-at="2022-10-08T16:00:04 IST" duration-ms="83550">
-      <class name="com.opencart.tests.TC009_EndToEndTest">
-        <test-method is-config="true" signature="launchApp(java.lang.String)[pri:0, instance:com.opencart.tests.TC009_EndToEndTest@3bb9a3ff]" started-at="2022-10-08T15:58:42 IST" name="launchApp" finished-at="2022-10-08T15:58:48 IST" duration-ms="6373" status="PASS">
+    <test started-at="2022-11-11T08:20:38 IST" name="Test(failed)(failed)(failed)" finished-at="2022-11-11T08:20:51 IST" duration-ms="13693">
+      <class name="com.opencart.tests.TC007_CheckoutPageTest">
+        <test-method is-config="true" signature="launchApp(java.lang.String)[pri:0, instance:com.opencart.tests.TC007_CheckoutPageTest@5ffead27]" started-at="2022-11-11T08:20:39 IST" name="launchApp" finished-at="2022-11-11T08:20:42 IST" duration-ms="3775" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method signature="endToEndFlowTest(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)[pri:0, instance:com.opencart.tests.TC009_EndToEndTest@3bb9a3ff]" started-at="2022-10-08T15:58:48 IST" name="endToEndFlowTest" data-provider="dataSupplier" finished-at="2022-10-08T16:00:04 IST" duration-ms="75902" status="PASS">
+        <test-method signature="enterBillingDetails(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)[pri:0, instance:com.opencart.tests.TC007_CheckoutPageTest@5ffead27]" started-at="2022-11-11T08:20:42 IST" name="enterBillingDetails" data-provider="dataSupplier" finished-at="2022-11-11T08:20:51 IST" duration-ms="8648" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -58,8 +58,12 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- endToEndFlowTest -->
-      </class> <!-- com.opencart.tests.TC009_EndToEndTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- enterBillingDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.opencart.tests.TC007_CheckoutPageTest@5ffead27]" started-at="2022-11-11T08:20:51 IST" name="tearDown" finished-at="2022-11-11T08:20:51 IST" duration-ms="251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.opencart.tests.TC007_CheckoutPageTest -->
+    </test> <!-- Test(failed)(failed)(failed) -->
+  </suite> <!-- Failed suite [Failed suite [Failed suite [Suite]]] -->
 </testng-results>

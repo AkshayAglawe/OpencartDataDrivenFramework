@@ -23,7 +23,7 @@ public class HomePage {
 
 	@FindBy(xpath = "//a[text()='Your Store']")
 
-	WebElement logo;
+	private WebElement logo;
 
 	public boolean validateLogo() {
 		return logo.isDisplayed();
@@ -35,7 +35,7 @@ public class HomePage {
 
 	@FindBy(xpath = "//span[normalize-space()='My Account']")
 	@CacheLookup
-	WebElement myAccount;
+	private WebElement myAccount;
 
 	public void clickOnMyAccountDropMenu() {
 
@@ -45,7 +45,7 @@ public class HomePage {
 
 	@FindBy(linkText = "Login")
 	@CacheLookup
-	WebElement loginOption;
+	private WebElement loginOption;
 
 	public LoginPage selectLoginOption() {
 
@@ -56,7 +56,7 @@ public class HomePage {
 	}
 
 	@FindBy(linkText = "Register")
-	WebElement registerOption;
+	private WebElement registerOption;
 
 	public RegisterPage selectRegisterOption() {
 
@@ -69,23 +69,11 @@ public class HomePage {
 	public String validateLogoutOption() {
 		String text = loginOption.getText();
 		String text2 = registerOption.getText();
-		return   text.concat(text2);
+		return text.concat(text2);
 
 	}
-	
-	@FindBy(xpath="//a[text()='Logout']")
-		WebElement logoutBtn;
-	
-	
 
-//	@FindBys({
-//		@FindBy(xpath="(//a[text()='Register']//ancestor::*)[8]"),
-//		
-//	})
-//	list<WebElement> allOptionUnderMyAccountDropdown;
-//	
-//	public void validateLogoutOption() {
-//		for (WebElement element: allOptionUnderMyAccountDropdown )
-//	}
+	@FindBy(xpath = "//a[text()='Logout']")
+	private WebElement logoutBtn;
 
 }

@@ -9,6 +9,7 @@ import com.opencart.tests.BaseClass;
 
 public class SearchResultPage extends BaseClass {
 	WebDriver driver;
+
 	public SearchResultPage(WebDriver driver) {
 
 		this.driver = driver;
@@ -16,22 +17,25 @@ public class SearchResultPage extends BaseClass {
 		PageFactory.initElements(driver, this);
 
 	}
-	@FindBy(xpath="//a[text()='HP LP3065']")
-	WebElement searchReasult;
-	
+
+	@FindBy(xpath = "//a[text()='HP LP3065']")
+	private WebElement searchReasult;
+
 	public String validateSearchResult() {
 		return searchReasult.getText();
 	}
 
-	@FindBy(xpath="//img[@class='img-responsive']")
-	WebElement productImage;
-	
+	@FindBy(xpath = "//img[@class='img-responsive']")
+	private WebElement productImage;
+
 	public ProductPage clickOnProductImage() {
 		productImage.click();
 		return new ProductPage(driver);
 	}
-	@FindBy(xpath="//p[text()='There is no product that matches the search criteria.']")
-	WebElement message;
+
+	@FindBy(xpath = "//p[text()='There is no product that matches the search criteria.']")
+	private WebElement message;
+
 	public String validateErrorMessage() {
 		return message.getText();
 	}
