@@ -61,7 +61,7 @@ public class TC007_CheckoutPageTest extends BaseClass {
 		checkoutPage.continue4();
 		checkoutPage.clickConfirmBtn();
 		boolean result = driver.getPageSource().contains("Your order has been placed!");
-		// Assert.assertTrue(result);
+		 Assert.assertTrue(result);
 	}
 	
 	

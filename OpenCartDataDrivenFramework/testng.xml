@@ -8,15 +8,9 @@
 	<test thread-count="5" name="Test">
 		<classes>
 
-			<class name="com.opencart.tests.TC001_HomePageTest" />
-			<class name="com.opencart.tests.TC002_LoginPageTest" />
-			<class name="com.opencart.tests.TC003_MyAccountPageTest" />
-			<class name="com.opencart.tests.TC004_RegisterPageTest" />
-			<class name="com.opencart.tests.TC005_ProductPageTest" />
-			<class name="com.opencart.tests.TC006_ShoppingCartTest" />
+		
 			<class name="com.opencart.tests.TC007_CheckoutPageTest" />
-			<class name="com.opencart.tests.TC008_LogOutTest" />
-			<class name="com.opencart.tests.TC009_EndToEndTest" />
+			
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

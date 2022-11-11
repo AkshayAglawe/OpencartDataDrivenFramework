@@ -7,14 +7,6 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.opencart.tests.TC003_MyAccountPageTest">
-        <methods>
-          <include name="launchApp"/>
-          <include name="tearDown"/>
-          <include name="searchWithEnterBtn"/>
-          <include name="searchForExistingProduct"/>
-        </methods>
-      </class> <!-- com.opencart.tests.TC003_MyAccountPageTest -->
       <class name="com.opencart.tests.TC007_CheckoutPageTest">
         <methods>
           <include name="launchApp"/>
